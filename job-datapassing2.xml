@@ -1,0 +1,45 @@
+<joblist>
+  <job>
+    <context>
+      <options preserveOrder='true'>
+        <option name='data_passing_input' />
+      </options>
+    </context>
+    <defaultTab>summary</defaultTab>
+    <description>Child Job print value from parent job</description>
+    <executionEnabled>true</executionEnabled>
+    <group>Data Passing example</group>
+    <id>a0531a40-3c5e-44f7-8e2b-fc10ba3fae5a</id>
+    <loglevel>INFO</loglevel>
+    <name>Child-Job</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <exec>echo ${option.data_passing_input}</exec>
+        <plugins>
+          <LogFilter type='key-value-data'>
+            <config>
+              <logData>true</logData>
+              <name>login</name>
+              <regex>^(.+?)$</regex>
+            </config>
+          </LogFilter>
+        </plugins>
+      </command>
+      <command>
+        <step-plugin type='export-var'>
+          <configuration>
+            <entry key='export' value='val' />
+            <entry key='group' value='export' />
+            <entry key='value' value='${data.login*}' />
+          </configuration>
+        </step-plugin>
+      </command>
+      <command>
+        <exec>echo ${export.val}</exec>
+      </command>
+    </sequence>
+    <uuid>a0531a40-3c5e-44f7-8e2b-fc10ba3fae5a</uuid>
+  </job>
+</joblist>
