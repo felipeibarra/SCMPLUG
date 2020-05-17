@@ -1,7 +1,7 @@
 <joblist>
   <job>
     <defaultTab>nodes</defaultTab>
-    <description></description>
+    <description>modificación1</description>
     <executionEnabled>true</executionEnabled>
     <id>763dabae-03c0-4ef1-aa46-7ddbbd1f8d3a</id>
     <loglevel>INFO</loglevel>
