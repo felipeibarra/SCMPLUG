@@ -1,0 +1,20 @@
+<joblist>
+  <job>
+    <defaultTab>nodes</defaultTab>
+    <description></description>
+    <executionEnabled>true</executionEnabled>
+    <id>763dabae-03c0-4ef1-aa46-7ddbbd1f8d3a</id>
+    <loglevel>INFO</loglevel>
+    <name>JOB-PLUGIN-1</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <plugins />
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <description>PLUGIN-1-STEP1</description>
+        <exec>echo 'plugin 1'</exec>
+      </command>
+    </sequence>
+    <uuid>763dabae-03c0-4ef1-aa46-7ddbbd1f8d3a</uuid>
+  </job>
+</joblist>

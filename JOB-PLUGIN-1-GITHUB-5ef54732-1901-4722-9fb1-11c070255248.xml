@@ -1,0 +1,31 @@
+<joblist>
+  <job>
+    <defaultTab>nodes</defaultTab>
+    <description></description>
+    <executionEnabled>true</executionEnabled>
+    <id>5ef54732-1901-4722-9fb1-11c070255248</id>
+    <loglevel>INFO</loglevel>
+    <name>JOB-PLUGIN-1-GITHUB</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <plugins />
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <description>STEP-PLUG-GIT</description>
+        <step-plugin type='github-script-step'>
+          <configuration>
+            <entry key='githubAuthPassword' value='keys/gitpass/githubfiz' />
+            <entry key='githubAuthType' value='Basic' />
+            <entry key='githubAuthUsername' value='felipeibarra' />
+            <entry key='githubScriptExecutable' value='/bin/bash' />
+            <entry key='githubScriptFail' value='true' />
+            <entry key='githubScriptFile' value='blank.yml' />
+            <entry key='githubScriptPath' value='felipeibarra/SCMPLUG/tree/master/.github/workflows' />
+            <entry key='githubUrl' value='https://github.com/' />
+          </configuration>
+        </step-plugin>
+      </command>
+    </sequence>
+    <uuid>5ef54732-1901-4722-9fb1-11c070255248</uuid>
+  </job>
+</joblist>
